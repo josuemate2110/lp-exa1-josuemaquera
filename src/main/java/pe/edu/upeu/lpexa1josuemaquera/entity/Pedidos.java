@@ -5,13 +5,17 @@ private int idpedidos;
 private String fecha;
 private String direccion_entrega;
 private int idusuario;
-public Pedidos(int idpedidos, String fecha, String direccion_entrega, int idusuario) {
+private String alias;
+public Pedidos() {
+	super();
+}
+public Pedidos(int idpedidos, String fecha, String direccion_entrega, int idusuario, String alias) {
+	super();
 	this.idpedidos = idpedidos;
 	this.fecha = fecha;
 	this.direccion_entrega = direccion_entrega;
 	this.idusuario = idusuario;
-}
-public Pedidos() {
+	this.alias = alias;
 }
 public int getIdpedidos() {
 	return idpedidos;
@@ -36,5 +40,11 @@ public int getIdusuario() {
 }
 public void setIdusuario(int idusuario) {
 	this.idusuario = idusuario;
+}
+public String getAlias() {
+	return alias;
+}
+public void setAlias(String alias) {
+	this.alias = alias;
 }
 }
