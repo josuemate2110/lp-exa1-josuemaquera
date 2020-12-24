@@ -74,7 +74,7 @@ public List<Platos> platosReadAll() {
 	return platosService.readAll();
 }
 @GetMapping("/platos/id/{Id}")
-public Platos platosReadById(int Id) {
+public Platos platosReadById(@PathVariable int Id) {
 	return platosService.readById(Id);
 }
 @GetMapping("/platos/updatestock/{Id}/{Cantidad}")
