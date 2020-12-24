@@ -30,13 +30,16 @@ public class PedidosDaoImp implements PedidosDao{
 	@Override
 	public int createPedidos(Pedidos pedido) {
 		// TODO Auto-generated method stub
-		return 0;
+		String SQL="insert into pedidos(fecha, direccion_entrega, idusuario, alias) values(?, ?, ?, ?)";
+		jdbcTemplate.update(SQL, pedido.getFecha(), pedido.getDireccion_entrega(), pedido.getIdusuario(), pedido.getAlias());
+		String SQL2="select max(idpedidos) from pedidos";
+		return jdbcTemplate.queryForObject(SQL2, Integer.class);
 	}
 
 	@Override
 	public int deletePedidos(int Id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return jdbcTemplate.update("delete from pedidos where idpedidos=?", Id);
 	}
 
 }

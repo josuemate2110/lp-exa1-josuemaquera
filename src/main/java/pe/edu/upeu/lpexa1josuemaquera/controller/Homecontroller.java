@@ -66,7 +66,7 @@ public int createPedidos(@RequestBody Pedidos pedido) {
 	return pedidosService.createPedidos(pedido);
 }
 @GetMapping("/pedido/delete/{Id}")
-public int deletePedidos(@RequestBody int Id) {
+public int deletePedidos(@PathVariable int Id) {
 	return pedidosService.deletePedidos(Id);
 }
 @GetMapping("/platos/all")
