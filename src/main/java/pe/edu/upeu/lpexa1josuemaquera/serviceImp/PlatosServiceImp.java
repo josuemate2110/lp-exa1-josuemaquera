@@ -16,19 +16,19 @@ public class PlatosServiceImp implements PlatosService{
 	@Override
 	public List<Platos> readAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return platosDao.readAll();
 	}
 
 	@Override
 	public Platos readById(int Id) {
 		// TODO Auto-generated method stub
-		return null;
+		return platosDao.readById(Id);
 	}
 
 	@Override
 	public int updateStockById(int Id, int Cantidad) {
 		// TODO Auto-generated method stub
-		return 0;
+		return platosDao.updateStockById(Id, Cantidad);
 	}
 
 }

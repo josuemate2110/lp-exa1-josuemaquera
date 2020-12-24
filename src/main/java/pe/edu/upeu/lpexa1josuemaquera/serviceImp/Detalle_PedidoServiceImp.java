@@ -25,12 +25,12 @@ private Detalle_PedidoDao detalle_PedidoDao;
 	@Override
 	public int createDetalle_Pedido(Detalle_Pedido detalle) {
 		// TODO Auto-generated method stub
-		return 0;
+		return detalle_PedidoDao.createDetalle_Pedido(detalle);
 	}
 	@Override
 	public int deleteDetalle_Pedido(int Id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return detalle_PedidoDao.deleteDetalle_Pedido(Id);
 	}
 
 

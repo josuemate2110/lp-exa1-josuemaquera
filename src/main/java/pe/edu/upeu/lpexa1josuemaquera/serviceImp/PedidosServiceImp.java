@@ -16,25 +16,25 @@ public class PedidosServiceImp implements PedidosService{
 	@Override
 	public List<Pedidos> readAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return pedidosDao.readAll();
 	}
 
 	@Override
 	public Pedidos readById(int Id) {
 		// TODO Auto-generated method stub
-		return null;
+		return pedidosDao.readById(Id);
 	}
 
 	@Override
 	public int createPedidos(Pedidos pedido) {
 		// TODO Auto-generated method stub
-		return 0;
+		return pedidosDao.createPedidos(pedido);
 	}
 
 	@Override
 	public int deletePedidos(int Id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return pedidosDao.deletePedidos(Id);
 	}
 
 }
