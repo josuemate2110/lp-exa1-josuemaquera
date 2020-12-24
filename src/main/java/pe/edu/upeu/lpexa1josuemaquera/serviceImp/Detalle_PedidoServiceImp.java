@@ -17,6 +17,21 @@ private Detalle_PedidoDao detalle_PedidoDao;
 		// TODO Auto-generated method stub
 		return detalle_PedidoDao.readAll();
 	}
+	@Override
+	public List<Detalle_Pedido> readByIdPedido(int Id) {
+		// TODO Auto-generated method stub
+		return detalle_PedidoDao.readByIdPedido(Id);
+	}
+	@Override
+	public int createDetalle_Pedido(Detalle_Pedido detalle) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int deleteDetalle_Pedido(int Id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 
 }

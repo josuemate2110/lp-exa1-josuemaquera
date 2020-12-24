@@ -18,4 +18,19 @@ public class Detalle_PedidoDaoImp implements Detalle_PedidoDao{
 		// TODO Auto-generated method stub
 		return jdbcTemplate.query("select*from Detalle_Pedido", BeanPropertyRowMapper.newInstance(Detalle_Pedido.class));
 	}
+	@Override
+	public List<Detalle_Pedido> readByIdPedido(int Id) {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.query("select*from Detalle_Pedido where idpedidos=?",new Object[] {Id} , BeanPropertyRowMapper.newInstance(Detalle_Pedido.class));
+	}
+	@Override
+	public int createDetalle_Pedido(Detalle_Pedido detalle) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int deleteDetalle_Pedido(int Id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
