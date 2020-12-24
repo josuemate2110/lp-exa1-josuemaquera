@@ -26,11 +26,12 @@ public class Detalle_PedidoDaoImp implements Detalle_PedidoDao{
 	@Override
 	public int createDetalle_Pedido(Detalle_Pedido detalle) {
 		// TODO Auto-generated method stub
-		return 0;
+		String SQL="insert into Detalle_pedido(precio, cantidad, idplatos, idpedidos) values(?, ?, ?, ?)";
+		return jdbcTemplate.update(SQL, detalle.getPrecio(), detalle.getCantidad(), detalle.getIdplatos(), detalle.getIdpedidos());
 	}
 	@Override
 	public int deleteDetalle_Pedido(int Id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return jdbcTemplate.update("delete from detalle_pedido where iddetalle_pedido=?", Id);
 	}
 }
