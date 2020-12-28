@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.event.AuthenticationCredentialsNotFoundEvent;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,7 @@ import pe.edu.upeu.lpexa1josuemaquera.service.PedidosService;
 import pe.edu.upeu.lpexa1josuemaquera.entity.Platos;
 import pe.edu.upeu.lpexa1josuemaquera.service.PlatosService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class Homecontroller {
 	@Autowired
